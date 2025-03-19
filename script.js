@@ -53,9 +53,22 @@ function shareOnTwitter() {
 	);
 }
 
+//set Random image background
+function setRandomBackground() {
+  let setImages = ['background_01.jpg', 'background_02.jpg', 'background_03.jpg', 'background_04.jpg', 'background_05.jpg', 'background_06.jpg'];
+
+  const container = document.getElementsByClassName('container')[0];
+	container.style.backgroundImage = `url('./asset/${setImages[Math.floor(Math.random() * setImages.length)]}')`;
+  container.style.backgroundSize = 'cover';
+  container.style.backgroundPosition = 'center';
+  container.style.backgroundRepeat = 'no-repeat';
+}
+
 //for default quote value
 fetchRandomQuote();
+setRandomBackground();
 
 document.getElementById('new-quote-btn').addEventListener('click', fetchRandomQuote);
+document.getElementById('new-quote-btn').addEventListener('click', setRandomBackground);
 document.getElementById('copy-btn').addEventListener('click', copyToClipboard);
 document.getElementById('share-tweeter').addEventListener('click', shareOnTwitter);
