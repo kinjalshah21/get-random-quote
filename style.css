@@ -51,8 +51,9 @@ h3 {
     right: 25%;
 }
 
-#copy-btn {
+#copy-btn, #share-tweeter {
     border: none;
     background-color: transparent;
 
 }
+
